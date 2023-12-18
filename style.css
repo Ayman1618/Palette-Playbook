@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Klee+One:wght@600&family=Permanent+Marker&family=Shrikhand&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#side-img{
+    height: 50vw;
+    width: 50vw;
+    margin-left: 49.5vw;
+    margin-top: -1vw;
+    position: absolute;
+}
+
+#logo{
+    height: 10vw;
+    width: 15vw;
+    top: 0vw;
+    margin-top: -0.3vw;
+}
+
+.logo{
+    height: 1vw;
+    width: 1vw;
+    margin-top: 1vw;
+    top: 1vw;
+}
+
+.bolded-text{
+    margin-top: 12vw;
+    font-size: xx-large;
+    margin-left: 2vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.description{
+    margin-left: 2.3vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    word-spacing: 0.5vw;
+    line-break: normal;
+    margin-top: -1vw;
+
+}
+
+#spices{
+    height: 13vw;
+    width: 13vw;
+    margin-left: 38vw;
+    margin-top: -1vw;
+}
+
+#search-box{
+    margin-left: 25vw;
+    margin-top: 2vw;
+    height: 2vw;
+    width: 45vw;
+
+}
+
+::placeholder{
+    text-align: center;
+    font-size: larger;
+}
+
+.random-statement{
+    margin-top: 14vw;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Alex Brush', cursive;
+}
+
+
+#food-img1{
+    height: 40vw;
+    margin-top: 15vw;
+    position: absolute;
+    margin-left: -1vw;
+}
+
+#food-img2{
+    margin-left: 78vw;
+    margin-top: -13vw;
+}
+
+.random-box{
+    background-color: #d9d9d9;
+    width: 29vw;
+    height: 31vw;
+    margin-top: -20vw;
+    border-radius: 21px;
+    
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(26px 22px 15.7px rgba(0, 0, 0, 0.25));
+
+}
+
+.searchboxArea{
+    display: flex;
+    border: 2px solid #a2a2a2cc;
+    margin-top: 10px;
+    width: 48vw;
+    position: sticky;
+    top: 0px;
+    margin-bottom: 05px;
+    margin-left: 25vw;
+    margin-top: 2vw;
+}
+
+.searchBox{
+    width: 45vw;
+    height: 3vw;
+    border: none;
+    background-color: #008E1F00;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.searchBox::placeholder{
+    font-size: 20px;
+    color: #A2A2A2;
+    margin: 20px;
+}
+
+.search{
+    height: 3vw;
+    width: 3vw;
+    background-color: #A2A2A259;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.searchIcon{
+    width: 40%;
+}
+
+#placeholder-text::placeholder{
+    font-family: 'Shrikhand', serif;
+    font-size: 13px;
+}
+
+#random-dish{
+    height: 22vw;
+    width: 23vw;
+    border-radius: 21px;
+    margin-left: 3vw;
+    margin-top: 2vw;
+    
+}
+
+.searched-results{
+    font-family:  'Klee One', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 21vw;
+}
+
+
+
+
+
