@@ -112,7 +112,7 @@ window.onload = async function () {
     await getRandomMeal();
 };
 
-
+//modal appear
 const randBox = document.querySelector('.rand-box')
 const modal = document.querySelector('.modal')
 
@@ -120,8 +120,17 @@ randBox.onclick = () => {
     modal.style.display = "block"
 }
 
+//close modal
 const close = document.querySelector('.close')
 
 close.onclick = () => {
     modal.style.display = "none"
+}
+
+
+//search button working
+const searchbutton = document.querySelector('.search')
+
+searchbutton.onclick = () => {
+    getMeals();
 }

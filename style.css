@@ -276,9 +276,15 @@ h3{
         width: 100%;
         gap: 10.5rem;
     }
-    
-    /* .search input{
-        width: 95%;
-		margin: 0 auto;
-    } */
+    .rand-box{
+        margin-top: -35vh;
+    }
+    .bolded-text{
+        font-size: 3vw;
+        width: 40vw; 
+    }
+    .description{
+        font-size: 2vw;
+        width: 40vw;
+    }
 }
