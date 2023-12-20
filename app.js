@@ -45,7 +45,7 @@ async function getRandomMeal() {
 // Function to fetch and display meals based on user input
 function getMeals() {
     const name = input.value;
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${name}`)
         .then((data) => data.json())
         .then((data) => {
             if (data.meals) {
