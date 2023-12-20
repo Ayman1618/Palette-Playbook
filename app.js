@@ -18,6 +18,25 @@ async function getRandomMeal() {
             <img src="${meal.strMealThumb}" id="image" width="150vw" />
             <h3 class="name">${meal.strMeal}</h3>   
         `;
+
+        let ingredientsList = []
+
+    for (let i = 1; i <= 8; i++) {
+            //take every ingredient individually till there are no ingredients left
+        const ingredient = data.meals[0][`strIngredient${i}`];
+        const measure = data.meals[0][`strMeasure${i}`];
+            
+            // Add non-empty ingredients and measures to the list
+        if (ingredient && measure) {
+            ingredientsList+=`<li>${measure} ${ingredient}</li>`
+        }
+
+        const list = document.querySelector('.list')
+
+        list.innerHTML = ingredientsList
+
+        console.log("vubv",ingredientsList)
+    }
     } catch (error) {
         console.error("Error in fetching random meal data:", error);
     }
@@ -28,8 +47,18 @@ function getMeals() {
     const name = input.value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
         .then((data) => data.json())
-        .then((data) => displayMeals(data));
+        .then((data) => {
+            if (data.meals) {
+                displayMeals(data);
+            } else {
+                console.log("No meals found");
+            }
+        })
+        .catch((error) => {
+            console.error("Error in fetching meal data:", error);
+        });
 }
+
 
 // Function to display meals
 function displayMeals(data) {
@@ -60,6 +89,8 @@ function displayMeals(data) {
         Meal.append(newTile);
     });
 
+    
+
     // Displaying category information for the first meal
     if (meals.length > 0) {
         categories[0].textContent = meals[0].strCategory;
@@ -80,3 +111,17 @@ input.addEventListener('keypress', function (e) {
 window.onload = async function () {
     await getRandomMeal();
 };
+
+
+const randBox = document.querySelector('.rand-box')
+const modal = document.querySelector('.modal')
+
+randBox.onclick = () => {
+    modal.style.display = "block"
+}
+
+const close = document.querySelector('.close')
+
+close.onclick = () => {
+    modal.style.display = "none"
+}
